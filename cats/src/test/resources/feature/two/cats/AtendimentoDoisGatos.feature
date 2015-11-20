@@ -9,6 +9,6 @@ Feature: Atendimento Gatos
 	When o cliente vai pagar em "Boleto"
 	Then o recibo deve ter 4 servicos
 		And o servico 1 deve ser "Castração"
-		And o servico 2 deve ser "Castração"
-		And o servico 1 deve ser "Esterelização"
+		And o servico 2 deve ser "Esterelização"
+		And o servico 1 deve ser "Castração"
 		And o servico 2 deve ser "Esterelização"

@@ -4,7 +4,11 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Recibo {
+	private String nomeCliente;
+	private String nomeAnimal;
+	
 	public String getNomeCliente() {
 		return nomeCliente;
 	}
@@ -22,11 +26,11 @@ public class Recibo {
 	}
 
 	public BigDecimal getValorAtendimento() {
-		return valorAtendimento;
+		return valorProcedimento;
 	}
 
-	public void setValorAtendimento(BigDecimal valorAtendimento) {
-		this.valorAtendimento = valorAtendimento;
+	public void setValorAtendimento(BigDecimal valorProcedimento) {
+		this.valorProcedimento = valorProcedimento;
 	}
 
 	public List<Item> getItens() {
@@ -37,9 +41,8 @@ public class Recibo {
 		this.itens = itens;
 	}
 
-	private String nomeCliente;
-	private String nomeAnimal;
-	private BigDecimal valorAtendimento = new BigDecimal( 0 );
+	private BigDecimal valorProcedimento = new BigDecimal( 0 );
+
 	private List<Item> itens;
 
 	public void listaItemAdd( Item item ) {
@@ -47,6 +50,6 @@ public class Recibo {
 			itens = new ArrayList<Item>();
 		}
 		itens.add( item );
-		this.valorAtendimento = this.valorAtendimento.add( item.getValor() );
+		this.valorProcedimento = this.valorProcedimento.add( item.getValor() );
 	}
 }
